@@ -313,3 +313,8 @@ app.get("/suspicious", (req, res) => {
     res.render(".TestStart/suspicious.ejs", { message: "Suspicious activity detected!" });  // Renders a view with a message
 });
 
+app.get("/endtest", (req, res) => {
+    // This is a placeholder response. You can render a view or send a JSON response as per your requirements.
+    res.render(".TestStart/endtest.ejs", { message: "Thank you for submitting the test" });  // Renders a view with a message
+});
+

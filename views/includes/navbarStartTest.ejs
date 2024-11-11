@@ -54,6 +54,7 @@
           clearInterval(timerInterval);
           localStorage.removeItem("timeLeft"); // Clear saved time when timer ends
           alert("Time is up!");
+          window.location.href='/endtest';
       }
   }
 
@@ -63,5 +64,16 @@
   // Clear `timeLeft` from localStorage only when the test is completed or the timer ends
   window.addEventListener("beforeunload", () => {
       if (timeLeft <= 0) localStorage.removeItem("timeLeft");
+  });
+</script>
+
+<script>
+  // Listen for the message from the iframe
+  window.addEventListener("message", function(event) {
+      // Check if the message is from the correct iframe (you can add origin check if needed)
+      if (event.data === "alertTriggered") {
+          // Trigger the form submission
+          
+      }
   });
 </script>
